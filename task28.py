@@ -7,18 +7,16 @@
 #    4 
 #"""
 # вариант 1
-
-# функция нахождения суммы двух чисел
-def NumbersSum(numberA, numberB): # функция принимает два числа
-    if (numberA == 0):                   # проверка если = 0
-        return numberB                   # возвращаем число В
-    if (numberB == 0):                   # проверка если = 0
-        return numberA                   # возвращаем число А
-    if (numberA != 0 and numberB != 0):  # проверка если числа не = 0                               
-        return NumbersSum(numberA-1, numberB+1)
+def Sum(numA, numB): 
+    if (numA == 0):                   
+        return numB                   
+    if (numB == 0):                   
+        return numA                   
+    if (numA != 0 and numB != 0):                               
+        return Sum(numA-1, numB+1)
     
     
-numberA = int(input("Введите число A: "))
-numberB = int(input("Введите число B: "))
-result = NumbersSum(numberA, numberB) # вызываем функцию
-print(f"Сумма чила {numberA} и {numberB} равна: {result}")
+numA = int(input("Input the first number   "))
+numB = int(input("Input the second number  "))
+result = Sum(numA, numB)
+print(f"The sum of {numA} and {numB}  equals {result}")
