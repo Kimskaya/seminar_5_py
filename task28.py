@@ -8,12 +8,10 @@
 #"""
 # вариант 1
 def Sum(numA, numB): 
-    if (numA == 0):                   
-        return numB                   
-    if (numB == 0):                   
-        return numA                   
-    if (numA != 0 and numB != 0):                               
+                 
+    if (numA > 0 and numB > 0):                               
         return Sum(numA-1, numB+1)
+    return (numA+numB)
     
     
 numA = int(input("Input the first number   "))
