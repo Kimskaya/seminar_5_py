@@ -6,12 +6,12 @@
 #   A = 2; B = 3 -> 8
 
 def raiseToPower(num, pow): 
-   
-    if (pow == 1):               
-        return num                 
-    if (pow != 1):                  
+    if (pow==0) or (num==0):
+        return "there is no solution"
 
+    if (pow > 1):                  
         return (num * raiseToPower(num, pow - 1)) 
+    return num
     
 num = int(input("Input your number: "))
 pow = int(input("Input the power you want to raise your number in: "))
